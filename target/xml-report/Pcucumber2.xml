@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.694">
+    <testcase classname="Movita Test" name="MQA-32 Movita Anasayfa Dördüncü Section" time="21.368">
+        <system-out>
+            <![CDATA[Given kullanici movita sayfasına gider......................................passed
+Then kullanici ekranda verilen stringi verify eder..........................passed
+When kullanici sayfayi asagi indirir ve dorduncu sectionda durur............passed
+Then kullanici verilen String ve sayisal verileri dogrular..................passed
+And kullanici arrow sign üzerinde hoverover yapar...........................passed
+Then kullanici arrow sign üzerinde renk degisikligini dogrular..............passed
+And kullanici arrow sign tiklar.............................................passed
+Then kullanici arrow sign tiklayinca verilen stringi dogrular...............passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
