@@ -1,4 +1,4 @@
-@Movita
+@Movit
 Feature: Movita Test
 
   Scenario: MQA-1anasayfaLogoTesti
@@ -8,4 +8,3 @@ Feature: Movita Test
     Then kullanici motita logosunun clickable olduğunu görür
     And kullanici movita logosunu tiklar
     Then kullanici ekranda verilen stringi verify eder
-    And kullanici sayfayi kapatir
