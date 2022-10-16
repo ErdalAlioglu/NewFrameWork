@@ -82,7 +82,7 @@ public class MovitaStepDefinations {
 
 
 
-    //yeni case
+    //MQA-32
     @When("kullanici sayfayi asagi indirir ve dorduncu sectionda durur")
     public void kullanici_sayfayi_asagi_indirir_ve_dorduncu_sectionda_durur() throws InterruptedException {
         Actions actions = new Actions(Driver.getDriver());
@@ -135,4 +135,78 @@ public class MovitaStepDefinations {
 
     }
 
+    //MQA -33
+
+    @When("kullanici sayfayi asagi indirir ve besinci sectionda durur")
+    public void kullanici_sayfayi_asagi_indirir_ve_besinci_sectionda_durur() throws InterruptedException {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .perform();
+        Thread.sleep(2000);
+    }
+    @Then("kullanici cozumler kisminda bulunan dort bolume hover over yapar ve strigleri verify eder")
+    public void kullanici_cozumler_kisminda_bulunan_dort_bolume_hover_over_yapar_ve_strigleri_verify_eder() {
+
+
+        Assert.assertTrue(movita.okul_servis_araclari_takip_sistemi.isDisplayed());
+        Assert.assertTrue(movita.Kamerali_Arac_Takip_ve_Mobil_Kamera_Görüntüleme_Sistemi.isDisplayed());
+        Assert.assertTrue(movita.kisi_bilgilendirme_servisi.isDisplayed());
+        Assert.assertTrue(movita.kisi_nesne_hayvan_takip_sistemi.isDisplayed());
+    }
+    @Then("kullanici “Kisi Bilgilendirme Sistemi” click edince “Kisi Bilgilendirme Sistemi” verify eder")
+    public void kullanici_kisi_bilgilendirme_sistemi_click_edince_kisi_bilgilendirme_sistemi_verify_eder() throws InterruptedException {
+   movita.kisi_bilgilendirme_string_b.click();
+   Assert.assertTrue(movita.kisi_bilgilendirme_tiklama.isDisplayed());
+   Thread.sleep(2000);
+   movita.anasayfa.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .perform();
+        Thread.sleep(2000);
+
+    }
+
+    @Then("kullanici {string} uzerine hover over yapar arkaplan renk degisimini verify eder")
+    public void kullanici_uzerine_hover_over_yapar_arkaplan_renk_degisimini_verify_eder(String string) {
+        String color_before = movita.yediden_yetmise.getCssValue("background-color");
+        String color_b_hex = Color.fromString(color_before).asHex();
+
+        ReusableMethods.hover(movita.yediden_yetmise);
+        ReusableMethods.waitForVisibility(movita.yediden_yetmise, 500);
+
+        String color_after = movita.yediden_yetmise.getCssValue("background-color");
+        String color_a_hex = Color.fromString(color_after).asHex();
+        Assert.assertNotEquals(color_a_hex, color_b_hex);
+    }
+    @Then("kullanici {string} yazini click eder {string} stringini verify eder")
+    public void kullanici_yazini_click_eder_stringini_verify_eder(String string, String string2) {
+movita.yediden_yetmise_clk.click();
+Assert.assertTrue(movita.yediden_yetmise_string.isDisplayed());
+        movita.anasayfa.click();
+
+    }
+
+    @And("kullanici kisi nesne hayvan takip sistemi click edince stringi verify eder")
+    public void kullaniciKisiNesneHayvanTakipSistemiClickEdinceStringiVerifyEder() throws InterruptedException {
+        movita.kisi_nesne_hayvan_takip_sistemi_strin_b.click();
+        Assert.assertTrue(movita.kisi_nesne_hayvan_takip_sistemi_tiklama.isDisplayed());
+        Thread.sleep(2000);
+        movita.anasayfa.click();
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .sendKeys(Keys.PAGE_DOWN)
+                .perform();
+        Thread.sleep(2000);
+    }
 }

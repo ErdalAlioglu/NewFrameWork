@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.694">
-    <testcase classname="Movita Test" name="MQA-32 Movita Anasayfa Dördüncü Section" time="21.368">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="40.063">
+    <testcase classname="Movita Test" name="MQA-33 Movita Anasayfa Besinci Section" time="39.709">
+        <failure message="Values should be different. Actual: #00adee" type="java.lang.AssertionError">
             <![CDATA[Given kullanici movita sayfasına gider......................................passed
 Then kullanici ekranda verilen stringi verify eder..........................passed
-When kullanici sayfayi asagi indirir ve dorduncu sectionda durur............passed
-Then kullanici verilen String ve sayisal verileri dogrular..................passed
-And kullanici arrow sign üzerinde hoverover yapar...........................passed
-Then kullanici arrow sign üzerinde renk degisikligini dogrular..............passed
-And kullanici arrow sign tiklar.............................................passed
-Then kullanici arrow sign tiklayinca verilen stringi dogrular...............passed
+When kullanici sayfayi asagi indirir ve besinci sectionda durur.............passed
+Then kullanici cozumler kisminda bulunan dort bolume hover over yapar ve strigleri verify eder.passed
+And kullanici “Kisi Bilgilendirme Sistemi” click edince “Kisi Bilgilendirme Sistemi” verify eder.passed
+And kullanici kisi nesne hayvan takip sistemi click edince stringi verify eder.passed
+And kullanici "7'den fazla sektöre hizmet eden çözümlerimizi görmek için" uzerine hover over yapar arkaplan renk degisimini verify eder.failed
+And kullanici "7'den fazla sektöre hizmet eden çözümlerimizi görmek için " yazini click eder "Çözümler" stringini verify eder.skipped
+And kullanici arrow sign üzerinde hoverover yapar...........................skipped
+Then kullanici arrow sign üzerinde renk degisikligini dogrular..............skipped
+And kullanici arrow sign tiklar.............................................skipped
+Then kullanici arrow sign tiklayinca verilen stringi dogrular...............skipped
+
+StackTrace:
+java.lang.AssertionError: Values should be different. Actual: #00adee
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failEquals(Assert.java:187)
+	at org.junit.Assert.assertNotEquals(Assert.java:163)
+	at org.junit.Assert.assertNotEquals(Assert.java:177)
+	at stepdefinitions.MovitaStepDefinations.kullanici_uzerine_hover_over_yapar_arkaplan_renk_degisimini_verify_eder(MovitaStepDefinations.java:187)
+	at ✽.kullanici "7'den fazla sektöre hizmet eden çözümlerimizi görmek için" uzerine hover over yapar arkaplan renk degisimini verify eder(file:///Users/erdalalioglu/Desktop/seleniumdepen/Movita-Otomation/src/test/resources/features/MQA-33.feature:11)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

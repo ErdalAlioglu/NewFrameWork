@@ -69,4 +69,38 @@ public class MovitaPage {
 
     @FindBy(xpath = "//div[text()=\"Tüm Sektörlere Hitap Eden Çözümler\"]")
     public WebElement hitapedencozümler;
+
+    //MQA-33
+    @FindBy(xpath= "//*[@id=\"portfolio\"]/article[1]/div/div[1]/a")
+    public WebElement okul_servis_araclari_takip_sistemi;
+    @FindBy(xpath = "//*[@id=\"portfolio\"]/article[2]/div/div[1]/a")
+    public WebElement Kamerali_Arac_Takip_ve_Mobil_Kamera_Görüntüleme_Sistemi;
+    @FindBy(xpath = "//*[@id=\"portfolio\"]/article[3]/div/div[1]/a")
+    public WebElement kisi_bilgilendirme_servisi;
+    @FindBy(xpath = "//*[@id=\"portfolio\"]/article[4]/div/div[1]/a")
+    public WebElement kisi_nesne_hayvan_takip_sistemi;
+
+    @FindBy(xpath = "//*[@id='content']/div/a")
+    public WebElement cozumlerbutton;
+    @FindBy(xpath = "//*[@id='content']/div/a")
+    public WebElement cozumlerbutton_sonuc;
+    @FindBy(xpath = "//*[@id=\"portfolio\"]/article[4]/div/div[2]/h3/a")
+    public WebElement kisi_bilgilendirme_string_b;
+    @FindBy(xpath = "//*[@id=\"portfolio\"]/article[4]/div/div[2]/h3/a")
+    public WebElement kisi_nesne_hayvan_takip_sistemi_strin_b;
+
+    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    public WebElement kisi_bilgilendirme_tiklama;
+    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    public WebElement kisi_nesne_hayvan_takip_sistemi_tiklama;
+
+    @FindBy(xpath = "//*[@id=\"content\"]/div/a")
+    public WebElement yediden_yetmise;
+    @FindBy(xpath = "//*[@id=\"content\"]/div/a/div/strong")
+    public WebElement yediden_yetmise_clk;
+    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    public WebElement yediden_yetmise_string;
+
+    @FindBy(xpath = "//*[@id=\"header-wrap\"]/div/div/nav/ul/li[1]/a/div")
+    public WebElement anasayfa;
 }
